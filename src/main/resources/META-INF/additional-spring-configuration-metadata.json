@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "zcache.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启ZCache失效通知",
+      "defaultValue": false
+    }
+  ]
+}
