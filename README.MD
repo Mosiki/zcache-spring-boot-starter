@@ -27,7 +27,7 @@ ZCache 基于 Redis 的 PubSub 特性，实现集群中其他服务本地缓存�
     zcache:
       enabled: true
     ```
-4. 新增 Abstract 的实现类，覆写相应方法。
+4. 新增 AbstractCache 的实现类，覆写相应方法。
     ```java
     @Component
     public class UserCache extends AbstractCache<Long, User> {
