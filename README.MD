@@ -22,7 +22,7 @@ ZCache 基于 Redis 的 PubSub 特性，实现集群中其他服务本地缓存�
       <artifactId>spring-boot-starter-data-redis</artifactId>
     </dependency>
     ```
-3. 配置文件开启ZCache
+3. 配置文件开启 ZCache
     ```yaml
     zcache:
       enabled: true
@@ -43,7 +43,7 @@ ZCache 基于 Redis 的 PubSub 特性，实现集群中其他服务本地缓存�
         @Nonnull
         @Override
         protected Cache<Long, User> getCache() {
-           // 自定义 Cache 示例
+           // 自定义 Cache 实例
             return cache;
         }
     
