@@ -58,7 +58,17 @@ ZCache 基于 Redis 的 PubSub 特性，实现集群中其他服务本地缓存�
         }
     }
     ```
+5. 使用
+    ```java
+   @Resource
+   private UserCache userCache;
    
+   // cache中不存该key时，使用getLoadFunction中的方法加载数据       
+   User user = userCache.get(userId);
+
+   // 通过Redis的发布订阅发布通知，接收到通知的服务会自动淘汰本地缓存   
+   userCache.invalidate(userId); 
+   ```
 ## example
 [https://github.com/Mosiki/ZCache-Example](https://github.com/Mosiki/ZCache-Example)
 ## 联系方式
